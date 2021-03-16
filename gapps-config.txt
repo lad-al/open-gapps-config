@@ -1,0 +1,204 @@
+# Read more about gapps-config file here:
+# https://github.com/opengapps/opengapps/wiki/Advanced-Features-and-Options
+
+
+#Test                   # generate a detailed open_apps_log.txt file (in the same folder as your gapps-config), without making changes to your device
+
+
+# Downsizing - You can transform any GApps package into one of its "little brothers" by adding one of the following keywords
+
+#StockGApps             # [Super+]
+#FullGApps              # [Stock+]
+#MiniGApps              # [Full+]
+#MicroGApps             # [Mini+]
+#NanoGApps              # [Micro+]
+#PicoGApps              # [Nano+]
+
+
+
+# Exclude apps from being installed
+
+# Pico
+
+                        # Google Play Services
+                        # Google Play Store
+                        # Google System Base
+#CalSync                 # Google Calendar Sync (if Google Calendar is being installed)
+#DialerFramework         # Dialer Framework (Android 6.0+)
+#GoogleTTS               # Google Text-to-Speech Engine (Micro+ on 5.0-, Pico+ on 6.0+)
+#PackageInstallerGoogle  # Package Installer (Android 6.0 only & Android 8.0+)
+
+# Nano
+
+#SoundPicker             # Sounds
+#BatteryUsage            # Device Health Services (Android 7.1+)
+#Markup                  # Markup (ARM64 + Android 9.0+)
+#Search                  # Google App (excluding excludes GoogleNow/PixelLauncher)
+#Speech                  # Offline Speech Files
+#Wellbeing               # Digital Wellbeing (Android 9.0+)
+
+# Micro
+
+#ActionsServices         # Actions Services (Android 10+)
+#CalendarGoogle          # (R) Google Calendar
+#ExchangeGoogle          # (R) Exchange Services
+#Gmail                   # Gmail
+GoogleNow               # Google Now Launcher (Android 4.4 only) (requires Search)
+PixelIcons              # Pixel Icons (Android 7.1 only)
+#PixelLauncher           # Pixel Launcher (Android 5.0+) (requires Search and Wallpapers)
+#Wallpapers              # Google Wallpapers (Android 5.0+)
+
+# Mini
+
+CalculatorGoogle        # (R) Google Calculator (Android 5.0+)
+#CarrierServices         # Carrier Services (Android 6.0+) (required for Google Messages)
+#ClockGoogle             # (R) Google Clock
+#Maps                    # Google Maps
+#Messenger               # (R) Google Messages (except on tablet devices) (requires Carrier Services)
+#Photos                  # Google Photos
+TagGoogle               # (R) Google Tags (Android 5.0+)
+YouTube                 # YouTube
+
+# Full
+
+Books                   # Google Play Books
+#Chrome                  # Chrome
+#CloudPrint              # Cloud Print
+#Drive                   # Google Drive
+#Keep                    # Keep Notes
+Movies                  # Google Play Movies & TV
+Music                   # Google Play Music
+NewsStand               # Google News
+#PlayGames               # Google Play Games
+Talkback                # Android Accessibility Suite
+#Recorder               # Google Recorder
+
+# Stock
+
+#AndroidAuto             # Android Auto (Android 5.0+)
+CameraGoogle            # (R) Google Camera (Android 6.0+)
+#ContactsGoogle          # (R) Google Contacts (Android 5.1+)
+#DialerGoogle            # Google Phone (Android 6.0+)
+Duo                     # Duo
+#GooglePay               # Google Pay
+#KeyboardGoogle          # (R) Gboard
+#PrintServiceGoogle      # Print Service Recommendation Service (Android 7.0+)
+StorageManagerGoogle    # Smart Storage (Android 7.0+)
+Translate               # Google Translate
+VRService               # Google VR Services (Android 7.0+)
+WebViewGoogle           # (R) Android System Webview (Android 5.1+) (WebViewStub is installed on Android 7.0+)
+WebViewStub             # (R) Android System Webview (Stub) (Android 7.0+) (See note with WebViewGoogle)
+
+# Super
+
+BetterTogether          # Better Together (Android 9.0+)
+DMAgent                 # Google Apps Device Policy
+Docs                    # Google Docs
+Earth                   # Google Earth
+Fitness                 # Google Fit
+GCS                     # Google Connectivity Services (Android 5.1+) (excluding also excludes ProjectFi)
+Hangouts                # Google Hangouts
+Indic                   # Google Indic Keyboard
+Japanese                # Google Japanese Input
+Korean                  # Google Korean Input
+Pinyin                  # Google Pinyin Input
+ProjectFi               # Project Fi (Android 5.1+)
+Sheets                  # Google Sheets
+Slides                  # Google Slides
+Street                  # Google Street View
+Zhuyin                  # Google Zhuyin Input
+
+
+# (R) -> By default replaces the Stock/AOSP version of the application included in the ROM to avoid problems
+# Google Dialer depends on Dialer Framework; Google Now depends on Search; Pixel Launcher depends on Actions Services, Search and Wallpapers; Project Fi depends on GCS
+# Google WebView Stub only installs a placeholder APK of Google WebView that needs to be updated to function. Requires Android 7.0 or higher
+# Google Chrome and WebView require Trichrome Library starting with Android 10+, so it'll be installed with these
+
+
+
+# Enable Google Assistant
+
+GoogleAssistant
+
+
+
+# Prevent automatic Stock removals
+
+#+Browser       # Don't remove Stock Browser, even if Google Chrome is being installed
+#+CameraStock   # Don't remove Stock Camera, even if Google Camera is being installed
+#+DialerStock   # Don't remove Stock Dialer, even if Google Dialer is being installed
+#+Email         # Don't remove Stock Email, even if Gmail is being installed
+#+Gallery       # Don't remove Stock Gallery, even if Google Photos is being installed
+#+Launcher      # Don't remove Stock Launchers, even if Google Now Launcher is being installed
+#+MMS           # Don't remove Stock SMS app, even if Android Messages is being installed
+#+PicoTTS       # Don't remove PicoTTS, even if GoogleTTS is being installed
+#+WebViewStock  # Don't remove Stock WebView
+
+
+
+# Remove Stock apps
+
+# CMAccount               # Remove CM Account
+# CMAudioFX               # Remove CM AudioFX
+# CMBugReport             # Remove CM Bug Report
+# CMFileManager           # Remove CM File Manager
+# CMMusic                 # Remove CM Music
+# CMScreenCast            # Remove CM ScreenCast
+# CMSetupWizard           # Remove CM Setup Wizard (see Notes for CMSetupWizard)
+# CMUpdater               # Remove CM Updater
+# CMWallpapers            # Remove CM Wallpapers
+# CMWeatherProvider       # Remove CM Weather Underground
+
+# DashClock               # Remove DashClock Widget (found in certain ROMs)
+# Hexo                    # Remove Hexo Libre CM Theme
+# LRecorder               # Remove LineageOS Recorder
+# LSetupWizard            # Remove LineageOS Setup Wizard
+# LUpdater                # Remove LineageOS Updater
+# Logcat                  # Remove OmniROM MatLog
+# OmniSwitch              # Remove OmniSwitch recent apps switcher replacement
+
+# BasicDreams             # Remove Basic Dreams Wallpaper
+# Galaxy                  # Remove Galaxy (also known as BlackHole) Wallpaper
+# HoloSpiral              # Remove Holo Spiral Wallpaper
+# NoiseField              # Remove Noise Field Wallpaper
+# Phasebeam               # Remove Phasebeam Wallpaper
+# PhotoPhase              # Remove Photo Phase Wallpaper
+# PhotoTable              # Remove Photo Table Wallpaper
+
+Browser                 # Remove Stock Browser
+# CalculatorStock         # Remove Stock Calculator (automatically removed when Google Calculator is installed)
+# CalendarStock           # Remove Stock Calendar (automatically removed when Google Calendar is installed)
+CameraStock             # Remove Stock Camera (Including CAF's camera application, Snap)
+# ClockStock              # Remove Stock Desk Clock (automatically removed when Google Clock is installed)
+Email                   # Remove Stock Email Client
+# ExchangeStock           # Remove Stock Exchange Services (automatically removed when Google Exchange Services is installed)
+# FMRadio                 # Remove Stock FM Radio (not found on all devices or ROMs)
+# Gallery                 # Remove Stock Gallery (automatically removed when Google Photos is installed)
+# KeyboardStock           # Remove Stock Keyboard (automatically removed when Google Keyboard is installed)
+# Launcher                # Remove Stock Launcher (removes most commonly named launchers)
+# LiveWallpapers          # Remove Stock Live Wallpapers
+# LockClock               # Remove Stock Lockscreen Clock Widget
+# MMS                     # Remove Stock SMS (automatically removed if Android Messages is installed)
+# MzFileManager           # Remove Stock FlymeOS File Manager
+# MzPay                   # Remove Stock FlymeOS Pay system (this service is only available in China)
+# MzSetupWizard           # Remove Stock FlymeOS SetupWizard
+# MzUpdater               # Remove Stock FlymeOS Updater
+# MzWeather               # Remove Stock FlymeOS Weather (this service is only available in China)
+# PicoTTS                 # Remove Stock PicoTTS
+# PrintServiceStock       # Remove Stock Print Service Recommendation Service (automatically removed when Google Print Service Recommendation Service is installed)
+# SimToolKit              # Remove Stock SimToolKit
+SoundRecorder           # Remove Stock Sound Recorder
+# StorageManagerStock     # Remove Stock Storage Manager (automatically removed when Google Storage Manager is installed)
+# Studio                  # Remove Stock Movie Studio
+# SykoPath                # Remove SykoPath Layers Manager (found in certain ROMs)
+# TagStock                # Remove Stock NFC Tags (automatically removed when Google NFC Tags is installed)
+# Terminal                # Remove Stock Terminal
+# Themes                  # Remove Stock Theme Engine (will break the Settings Entry and can cause unexpected reboots on some ROMs)
+# VisualizationWallpapers # Remove Stock Visualization Wallpapers
+# WhisperPush             # Remove Stock WhisperPush support
+
+
+
+# Force DPI Setting
+
+#forcedpiXXX
