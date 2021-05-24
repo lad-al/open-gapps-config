@@ -118,7 +118,7 @@ Zhuyin                  # Google Zhuyin Input
 
 # Enable Google Assistant
 
-GoogleAssistant
+# GoogleAssistant
 
 
 
